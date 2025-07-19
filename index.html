@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+<title>Eye chatbot</title>
+  <link rel="website icon" type="png" href="palestina.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #E4EFE7, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-card {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .login-card h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    .btn-link {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      background-color: #E4EFE7;
+      color: #000;
+      font-size: 16px;
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    .btn-link {
+      background-color: #111211;
+      color: white;
+    }
+
+    .google-btn {
+      background: #E4EFE7;
+      color: #000;
+      border: 1px solid #000;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .google-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .google-btn:hover {
+      background-color: #d0dbd5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <h2>Login</h2>
+    <img src="palestina.png"  width="115px" height="115px">
+    <div class="form-group">
+      <input type="text" placeholder="Username" id="username">
+    </div>
+
+    <!-- Ganti tombol jadi link -->
+    <a href="return.php" class="btn-link" onclick="handleLogin()">Login</a>
+
+   
+  </div>
+
+  <script>
+    function handleLogin() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Harap masukkan username.");
+        return;
+      }
+      alert("Login sebagai " + username);
+    }
+
+    function loginWithGoogle() {
+      alert("Fungsi login Google belum dihubungkan.");
+    }
+  </script>
+
+</body>
+</html>
