@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Eye chatbot</title>
+  <link rel="website icon" type="png" href="palestina.png">
+</head>
+<body>
+  
+  <div class="send">
+    <h1>Pesan Sukses</h1>
+    <p>Pesan anda telah terkirim terima kasih telah berkunjung 😊</p>
+    <img src="oke.png">
+    <a href="return.php" style="color: whitesmoke;">back</a>
+
+    <style>
+      .send{
+        align-items: center;
+        text-align: center;
+      }
+      img{
+        width: 150px;
+        height: 150px;
+      }
+      img:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+      }
+    </style>
+     <script>
+    // Cek apakah URL memiliki parameter ?alert=1
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('alert')) {
+      alert("Ini adalah alert di halaman target!");
+    }
+  </script>
+  </div>
+</body>
+</html>
